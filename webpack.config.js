@@ -1,7 +1,7 @@
 const path = require('path')
 module.exports = {
 	mode: 'development',
-	entry: './src/index.js',
+	entry: './src/index.ts',
 	output: {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist')
@@ -12,10 +12,6 @@ module.exports = {
 			directory: path.join(__dirname, '/')
 		},
 		devMiddleware: {
-			// index: true,
-			// mimeTypes: { phtml: 'text/html' },
-			// publicPath: '/publicPathForDevServe',
-			// serverSideRender: true,
 			writeToDisk: true
 		},
 		hot: true,
@@ -23,6 +19,11 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.ts$/,
+				use: 'ts-loader',
+				include: [path.join(__dirname, 'src')]
+			},
 			{
 				test: /\.scss$/,
 				use: [
