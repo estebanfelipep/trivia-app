@@ -6,6 +6,21 @@ module.exports = {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	mode: 'development',
+	devServer: {
+		static: {
+			directory: path.join(__dirname, '/')
+		},
+		devMiddleware: {
+			// index: true,
+			// mimeTypes: { phtml: 'text/html' },
+			// publicPath: '/publicPathForDevServe',
+			// serverSideRender: true,
+			writeToDisk: true
+		},
+		hot: true,
+		port: 3000
+	},
 	module: {
 		rules: [
 			{

@@ -1,5 +1,11 @@
-$body-color: rgb(255, 207, 207);
+$body-color: rgb(26, 144, 26);
 
 body {
+	// background-color: $body-color;
 	background-color: $body-color;
+}
+
+h1 {
+	font-size: 2em;
+	color: white;
 }
