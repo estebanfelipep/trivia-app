@@ -1,2 +1,6 @@
 import './css/main.scss'
-console.log('log from js')
+
+if (module.hot) {
+	module.hot.accept()
+}
+console.log('log from j.')
