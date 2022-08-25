@@ -1,4 +1,4 @@
-import './css/main.scss'
+import './styles/main.scss'
 // @ts-ignore
 if (module.hot) {
 	// @ts-ignore
