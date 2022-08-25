@@ -1,12 +1,15 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const CleanWebpackPlugin = require('clean-webpack-plugin')
+
 module.exports = {
 	mode: 'development',
 	entry: './src/index.ts',
 	output: {
-		filename: 'main.js',
-		path: path.resolve(__dirname, 'dist')
+		filename: 'main.[contenthash].js',
+		path: path.resolve(__dirname, 'dist'),
+		clean: true
 	},
-	mode: 'development',
 	devServer: {
 		static: {
 			directory: path.join(__dirname, '/')
@@ -17,6 +20,11 @@ module.exports = {
 		hot: true,
 		port: 3000
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: './src/template.html'
+		})
+	],
 	module: {
 		rules: [
 			{

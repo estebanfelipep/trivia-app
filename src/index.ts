@@ -4,4 +4,4 @@ if (module.hot) {
 	// @ts-ignore
 	module.hot.accept()
 }
-console.log('log from index.ts')
+console.log('log from index.ts!')
