@@ -1,29 +1,30 @@
 const path = require('path')
-module.exports = {
+const common = require('./webpack.common')
+const { merge } = require('webpack-merge')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+module.exports = merge(common, {
 	mode: 'development',
-	entry: './src/index.ts',
 	output: {
 		filename: 'main.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		clean: true
 	},
-	mode: 'development',
 	devServer: {
-		static: {
-			directory: path.join(__dirname, '/')
-		},
+		static: ['src/template.html'],
 		devMiddleware: {
-			writeToDisk: true
+			writeToDisk: false
 		},
 		hot: true,
 		port: 3000
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: './src/template.html'
+		})
+	],
 	module: {
 		rules: [
-			{
-				test: /\.ts$/,
-				use: 'ts-loader',
-				include: [path.join(__dirname, 'src')]
-			},
 			{
 				test: /\.scss$/,
 				use: [
@@ -37,4 +38,4 @@ module.exports = {
 			}
 		]
 	}
-}
+})
