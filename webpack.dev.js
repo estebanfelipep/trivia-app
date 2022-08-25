@@ -11,9 +11,7 @@ module.exports = merge(common, {
 		clean: true
 	},
 	devServer: {
-		static: {
-			directory: path.join(__dirname, 'dist')
-		},
+		static: ['src/template.html'],
 		devMiddleware: {
 			writeToDisk: false
 		},
