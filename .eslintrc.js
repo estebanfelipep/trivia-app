@@ -12,8 +12,8 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
+  ignorePatterns: ['*.html'],
   rules: {
-    // indent: ["error", "tab"],
     indent: ['error', 2],
     'linebreak-style': 0,
     quotes: ['error', 'single'],
