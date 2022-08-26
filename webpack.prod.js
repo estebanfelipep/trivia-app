@@ -1,26 +1,26 @@
-const path = require('path')
-const common = require('./webpack.common')
-const { merge } = require('webpack-merge')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require("path")
+const common = require("./webpack.common")
+const { merge } = require("webpack-merge")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = merge(common, {
-	mode: 'production',
+	mode: "production",
 	output: {
-		filename: 'main.[contenthash].js',
-		path: path.resolve(__dirname, 'dist'),
-		clean: true
+		filename: "main.[contenthash].js",
+		path: path.resolve(__dirname, "dist"),
+		clean: true,
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/template.html',
+			template: "./src/template.html",
 			minify: {
 				removeAttributeQuotes: true,
 				collapseWhitespace: true,
-				removeComments: true
-			}
+				removeComments: true,
+			},
 		}),
-		new MiniCssExtractPlugin({ filename: 'main.[contenthash].css' })
+		new MiniCssExtractPlugin({ filename: "main.[contenthash].css" }),
 	],
 	module: {
 		rules: [
@@ -30,11 +30,11 @@ module.exports = merge(common, {
 					// Creates `style` nodes from JS strings
 					MiniCssExtractPlugin.loader,
 					// Translates CSS into CommonJS
-					'css-loader',
+					"css-loader",
 					// Compiles Sass to CSS
-					'sass-loader'
-				]
-			}
-		]
-	}
+					"sass-loader",
+				],
+			},
+		],
+	},
 })

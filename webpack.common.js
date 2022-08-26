@@ -1,14 +1,14 @@
-const path = require('path')
+const path = require("path")
 
 module.exports = {
-	entry: './src/index.ts',
+	entry: "./src/index.ts",
 	module: {
 		rules: [
 			{
 				test: /\.ts$/,
-				use: 'ts-loader',
-				include: [path.join(__dirname, 'src')]
-			}
-		]
-	}
+				use: "ts-loader",
+				include: [path.join(__dirname, "src")],
+			},
+		],
+	},
 }
