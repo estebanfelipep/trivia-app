@@ -4,20 +4,23 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+	extends: [
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
 	overrides: [],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		ecmaVersion: "latest",
 		sourceType: "module",
 	},
-	plugins: ["@typescript-eslint", "prettier"],
+	plugins: ["@typescript-eslint"],
 	rules: {
 		indent: ["error", "tab"],
-		"linebreak-style": ["error", "windows"],
+		"linebreak-style": 0,
 		quotes: ["error", "double"],
 		semi: ["error", "never"],
 		"@typescript-eslint/no-var-requires": 0,
-		"@typescript-eslint/ban-ts-comment": "off"
+		"@typescript-eslint/ban-ts-comment": "off",
 	},
 }

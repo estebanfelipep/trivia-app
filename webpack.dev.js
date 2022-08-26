@@ -23,9 +23,7 @@ module.exports = merge(common, {
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
 		}),
-		new ESLintPlugin({ 
-			//fix: true,
-			//context: path.join(paths.context, paths.js),
+		new ESLintPlugin({
 			extensions: ["js", "ts"],
 			emitError: true,
 			emitWarning: true,
@@ -42,9 +40,7 @@ module.exports = merge(common, {
 				use: [
 					// Creates `style` nodes from JS strings
 					"style-loader",
-					// Translates CSS into CommonJS
 					"css-loader",
-					// Compiles Sass to CSS
 					"sass-loader",
 				],
 			},

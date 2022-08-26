@@ -1,12 +1,12 @@
 {
-	"compilerOptions": {
-		"target": "ES6",
-		"module": "commonjs",
-		"esModuleInterop": true,
-		"moduleResolution": "node",
-		"sourceMap": false,
-		"outDir": ""
-	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules", "**/*.spec.ts"]
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "outDir": ""
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
