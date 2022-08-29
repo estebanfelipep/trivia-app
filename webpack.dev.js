@@ -14,10 +14,11 @@ module.exports = merge(common, {
   devServer: {
     static: ['src/index.html'],
     devMiddleware: {
-      writeToDisk: false,
+      writeToDisk: false, // if true, outputs app in the output path
     },
     hot: true,
     port: 3000,
+    open: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

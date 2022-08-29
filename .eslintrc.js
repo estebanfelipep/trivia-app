@@ -12,7 +12,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  ignorePatterns: ['*.html'],
+  ignorePatterns: ['*.html', '/dist'],
   rules: {
     indent: ['error', 2],
     'linebreak-style': 0,
