@@ -9,6 +9,14 @@ module.exports = {
         use: 'ts-loader',
         include: [path.join(__dirname, 'src')],
       },
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.html$/,
+        use: 'html-loader',
+      },
     ],
   },
 }
