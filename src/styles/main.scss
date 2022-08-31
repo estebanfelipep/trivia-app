@@ -1,9 +1,19 @@
-body {
-  background-color: greenyellow;
+@use './base';
+@use './components';
+@use './abstracts' as a;
+
+@use '../components/Header/Header.scss';
+@use '../components/Hero/Hero.scss';
+@use '../components/Footer/Footer.scss';
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
-h1 {
-  color: brown;
-}
-img {
-  max-width: 100%;
+header,
+footer {
+  background-color: a.$headerColor;
+  width: 100%;
+  padding: 1em 0;
 }
