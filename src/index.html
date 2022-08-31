@@ -7,19 +7,35 @@
     <title>Trivia App</title>
   </head>
   <body>
-    <div id="header"></div>
-    <div id="home">
-      <h1>Trivia app!!</h1>
-      <img src="./assets/imgs/download.png" alt="" />
-      <img src="./assets/imgs/test-img.jpg" alt="" />
-      <p>This is an awesome description of the best app!</p>
-      <p>another p tag</p>
-
-      <div>idsifa ojsdf</div>
-    </div>
-    <div id="playground">
-      <h2>This is the first question from the selected category</h2>
-    </div>
-    <div id="footer"></div>
+    <header>
+      <div class="container header">
+        <a class="header__logo" href="/">Trivia app</a>
+        <a class="header__button button button--main" href="#intro">Play now</a>
+      </div>
+    </header>
+    <main class="content">
+      <div class="container">
+        <div id="home">
+          <div class="hero">
+            <div class="hero__content">
+              <h1>Test your knowledge!</h1>
+              <p>
+                Put your knowledge to test and find out how much you know your
+                world
+              </p>
+            </div>
+            <div class="hero__image"></div>
+          </div>
+          <div class="intro" id="intro"></div>
+          <div class="choose-cat"></div>
+        </div>
+        <div id="playground"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>This is the footer</p>
+      </div>
+    </footer>
   </body>
 </html>
