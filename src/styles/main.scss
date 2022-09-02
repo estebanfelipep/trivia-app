@@ -2,10 +2,6 @@
 @use './components';
 @use './abstracts' as a;
 
-@use '../components/Header/Header.scss';
-@use '../components/Hero/Hero.scss';
-@use '../components/Footer/Footer.scss';
-
 .container {
   max-width: 1060px;
   margin: 0 auto;
