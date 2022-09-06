@@ -1,7 +1,7 @@
 @use '../abstracts' as a;
 
 .button {
-  @extend .py-2, .px-3;
+  @extend .py-2, .px-4;
   // padding: 0.5em 1.5em;
   border-radius: 10em;
   text-align: center;
