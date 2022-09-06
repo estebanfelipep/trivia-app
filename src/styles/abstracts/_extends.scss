@@ -1,0 +1,12 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+@include m.setBoxExtends(v.$boxMeasures, 'm', 'margin');
+
+@media (min-width: 768px) {
+  @include m.setBoxExtends(v.$boxMeasures, 'm', 'margin', '-d');
+}
+
+.test {
+  @extend .mt-0-d, .mxy-4;
+}

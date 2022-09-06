@@ -1,0 +1,30 @@
+@mixin setBoxExtends($measuresMap, $classBase, $propName, $classSufix: '') {
+  @each $measuresKey, $measuresValue in $measuresMap {
+    .#{$classBase}t-#{$measuresKey}#{$classSufix} {
+      #{$propName}-top: $measuresValue;
+    }
+    .#{$classBase}r-#{$measuresKey}#{$classSufix} {
+      #{$propName}-right: $measuresValue;
+    }
+    .#{$classBase}b-#{$measuresKey}#{$classSufix} {
+      #{$propName}-bottom: $measuresValue;
+    }
+    .#{$classBase}l-#{$measuresKey}#{$classSufix} {
+      #{$propName}-left: $measuresValue;
+    }
+    .#{$classBase}x-#{$measuresKey}#{$classSufix} {
+      #{$propName}-left: $measuresValue;
+      #{$propName}-right: $measuresValue;
+    }
+    .#{$classBase}y-#{$measuresKey}#{$classSufix} {
+      #{$propName}-top: $measuresValue;
+      #{$propName}-bottom: $measuresValue;
+    }
+    .#{$classBase}xy-#{$measuresKey}#{$classSufix} {
+      #{$propName}-top: $measuresValue;
+      #{$propName}-right: $measuresValue;
+      #{$propName}-bottom: $measuresValue;
+      #{$propName}-left: $measuresValue;
+    }
+  }
+}

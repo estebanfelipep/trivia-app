@@ -1,2 +1,13 @@
 $mainColor: rgb(255, 94, 94);
 $headerColor: antiquewhite;
+
+$baseBoxMeasure: 0.2em;
+
+$boxMeasures: (
+  '0': 0,
+  'a': 'auto',
+  '1': $baseBoxMeasure * 2,
+  '2': $baseBoxMeasure * 3,
+  '3': $baseBoxMeasure * 5,
+  '4': $baseBoxMeasure * 8,
+);
