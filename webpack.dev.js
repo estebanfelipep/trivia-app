@@ -3,6 +3,7 @@ const common = require('./webpack.common')
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -13,12 +14,15 @@ module.exports = merge(common, {
   },
   devServer: {
     static: ['src/index.html'],
-    devMiddleware: {
-      writeToDisk: false, // if true, outputs app in the output path
-    },
     hot: true,
     port: 3000,
     open: true,
+    devMiddleware: {
+      // this function avoids outputting on dist the 'hot-update.json' files on every hot reload
+      writeToDisk: (filePath) => {
+        return /^(?!.*(hot)).*/.test(filePath) // if true, outputs app in the output path
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -33,17 +37,13 @@ module.exports = merge(common, {
       fix: false,
       cache: false,
     }),
+    new MiniCssExtractPlugin({ filename: 'main.css' }),
   ],
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },
