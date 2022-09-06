@@ -5,6 +5,38 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const usePurgePluggin = false
+
+let customPlugins = [
+  new HtmlWebpackPlugin({
+    template: './src/index.html',
+  }),
+  new ESLintPlugin({
+    extensions: ['js', 'ts'],
+    emitError: true,
+    emitWarning: true,
+    failOnWarning: false,
+    failOnError: false,
+    fix: false,
+    cache: false,
+  }),
+  new MiniCssExtractPlugin({ filename: 'main.css' }),
+]
+
+if (usePurgePluggin) {
+  const PurgecssPlugin = require('purgecss-webpack-plugin')
+  const glob = require('glob')
+  const PATHS = {
+    src: path.join(__dirname, 'src'),
+  }
+
+  customPlugins.push(
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/index.html`, { nodir: true }),
+    }),
+  )
+}
+
 module.exports = merge(common, {
   mode: 'development',
   output: {
@@ -23,21 +55,7 @@ module.exports = merge(common, {
       },
     },
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-    new ESLintPlugin({
-      extensions: ['js', 'ts'],
-      emitError: true,
-      emitWarning: true,
-      failOnWarning: false,
-      failOnError: false,
-      fix: false,
-      cache: false,
-    }),
-    new MiniCssExtractPlugin({ filename: 'main.css' }),
-  ],
+  plugins: customPlugins,
   module: {
     rules: [
       {

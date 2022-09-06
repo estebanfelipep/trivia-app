@@ -1,0 +1,42 @@
+@use './extends-maps' as em;
+@use './mixins' as m;
+
+// Colors extends
+@include m.setColorExtends(em.$colors, 'bgc', 'background-color');
+@include m.setColorExtends(em.$colors, 'clr', 'color');
+@include m.setColorExtends(em.$colors, 'bdc', 'border-color');
+
+// Box model extends
+@include m.setBoxExtends(em.$boxMeasures, 'm', 'margin');
+@include m.setBoxExtends(em.$boxMeasures, 'p', 'padding');
+
+// Display extends
+@include m.setExtends(em.$display, 'd', 'display');
+@include m.setExtends(em.$flexDirection, 'fd', 'flex-direction');
+@include m.setExtends(em.$flexWrap, 'fw', 'flex-wrap');
+@include m.setExtends(em.$justifyContent, 'jc', 'justify-content');
+@include m.setExtends(em.$alingItems, 'ai', 'align-items');
+@include m.setExtends(em.$alignContent, 'ac', 'align-content');
+
+// Typography extends
+@include m.setExtends(em.$fontFamily, 'ff', 'font-family');
+@include m.setExtends(em.$fontSize, 'fsz', 'font-size');
+@include m.setExtends(em.$fontWeight, 'fw', 'font-weight');
+
+@media (min-width: 768px) {
+  // Box model extends
+  @include m.setBoxExtends(em.$boxMeasures, 'm', 'margin', '-d');
+  @include m.setBoxExtends(em.$boxMeasures, 'p', 'padding', '-d');
+
+  // Display extends
+  @include m.setExtends(em.$display, 'd', 'display', '-d');
+  @include m.setExtends(em.$flexDirection, 'fd', 'flex-direction', '-d');
+  @include m.setExtends(em.$flexWrap, 'fw', 'flex-wrap', '-d');
+  @include m.setExtends(em.$justifyContent, 'jc', 'justify-content', '-d');
+  @include m.setExtends(em.$alingItems, 'ai', 'align-items', '-d');
+  @include m.setExtends(em.$alignContent, 'ac', 'align-content', '-d');
+}
+
+.css-test {
+  @extend .mt-0-d, .mxy-4;
+}
