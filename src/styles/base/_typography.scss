@@ -1,0 +1,9 @@
+@use '../abstracts';
+
+html {
+  @extend .ff-1;
+}
+
+p {
+  @extend .ff-2;
+}

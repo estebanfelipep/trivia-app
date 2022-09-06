@@ -1,0 +1,45 @@
+$display: (
+  'fl': 'flex',
+  'ab': 'absolute',
+  're': 'relative',
+);
+
+$flexDirection: (
+  'c': 'column',
+  'r': 'row',
+);
+
+$flexWrap: (
+  'w': 'wrap',
+  'nw': 'nowrap',
+);
+
+$justifyContent: (
+  'fs': 'flex-start',
+  'fe': 'flex-end',
+  's': 'start',
+  'e': 'end',
+  'l': 'left',
+  'r': 'right',
+  'c': 'center',
+  'sb': 'space-between',
+  'sa': 'space-around',
+  'se': 'space-evenly',
+);
+
+$alingItems: (
+  's': 'stretch',
+  'fs': 'flex-start',
+  'fe': 'flex-end',
+  'c': 'center',
+  'b': 'baseline',
+);
+
+$alignContent: (
+  'fs': 'flex-start',
+  'fe': 'flex-end',
+  'c': 'center',
+  'sb': 'space-between',
+  'sa': 'space-around',
+  'se': 'space-evenly',
+);

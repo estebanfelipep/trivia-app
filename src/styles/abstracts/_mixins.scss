@@ -1,30 +1,57 @@
-@mixin setBoxExtends($measuresMap, $classBase, $propName, $classSufix: '') {
+/* 
+Sets extends classes for top, right, bottom, left, axes and all directions values
+  This mixing is meant to be used for padding and margin properties
+*/
+@mixin setBoxExtends($measuresMap, $classBase, $propName, $classSuffix: '') {
   @each $measuresKey, $measuresValue in $measuresMap {
-    .#{$classBase}t-#{$measuresKey}#{$classSufix} {
+    .#{$classBase}t-#{$measuresKey}#{$classSuffix} {
       #{$propName}-top: $measuresValue;
     }
-    .#{$classBase}r-#{$measuresKey}#{$classSufix} {
+    .#{$classBase}r-#{$measuresKey}#{$classSuffix} {
       #{$propName}-right: $measuresValue;
     }
-    .#{$classBase}b-#{$measuresKey}#{$classSufix} {
+    .#{$classBase}b-#{$measuresKey}#{$classSuffix} {
       #{$propName}-bottom: $measuresValue;
     }
-    .#{$classBase}l-#{$measuresKey}#{$classSufix} {
+    .#{$classBase}l-#{$measuresKey}#{$classSuffix} {
       #{$propName}-left: $measuresValue;
     }
-    .#{$classBase}x-#{$measuresKey}#{$classSufix} {
+    .#{$classBase}x-#{$measuresKey}#{$classSuffix} {
       #{$propName}-left: $measuresValue;
       #{$propName}-right: $measuresValue;
     }
-    .#{$classBase}y-#{$measuresKey}#{$classSufix} {
+    .#{$classBase}y-#{$measuresKey}#{$classSuffix} {
       #{$propName}-top: $measuresValue;
       #{$propName}-bottom: $measuresValue;
     }
-    .#{$classBase}xy-#{$measuresKey}#{$classSufix} {
+    .#{$classBase}xy-#{$measuresKey}#{$classSuffix} {
       #{$propName}-top: $measuresValue;
       #{$propName}-right: $measuresValue;
       #{$propName}-bottom: $measuresValue;
       #{$propName}-left: $measuresValue;
+    }
+  }
+}
+
+/*
+Sets extends classes for single properties based on the map passed or parameter
+*/
+
+@mixin setExtends($propsMap, $classBase, $propName, $classSuffix: '') {
+  @each $propKey, $propValue in $propsMap {
+    .#{$classBase}-#{$propKey}#{$classSuffix} {
+      #{$propName}: #{$propValue};
+    }
+  }
+}
+
+/**/
+@mixin setColorExtends($colorsMap, $classBase, $propName) {
+  @each $colorKey, $shades in $colorsMap {
+    @each $shadeKey, $shadeValue in $shades {
+      .#{$classBase}-#{$colorKey}#{$shadeKey} {
+        #{$propName}: $shadeValue;
+      }
     }
   }
 }
