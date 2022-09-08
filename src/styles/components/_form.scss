@@ -1,0 +1,43 @@
+@use '../abstracts';
+
+.form {
+  @extend .d-gr;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  gap: 1em;
+  &__control {
+    position: relative;
+  }
+  input[type='radio'] {
+  }
+}
+
+.radio {
+  &__input {
+    // RESETS RADIO INPUT BROWSER STYLES
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: white;
+    /* Not removed via appearance */
+    margin: 0;
+    //
+
+    @extend .pos-ab;
+
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    // z-index:  -1;
+    &:hover + .radio__card,
+    &:focus + .radio__card,
+    &:checked + .radio__card {
+      @extend .bgc-32, .bdc-21;
+    }
+    // &:focus + .radio__card {
+    //   @extend .bgc-32, .bdc-21;
+    // }
+  }
+}

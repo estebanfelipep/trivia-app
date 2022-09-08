@@ -1,7 +1,8 @@
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   box-sizing: border-box;
-  transition: all ease 0.3s;
 }
 
 a {
@@ -18,4 +19,15 @@ ul {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 0;
+}
+img {
+  width: 100%;
+}
+
+button {
+  border-color: unset;
+  border-width: unset;
+  box-shadow: unset;
+  appearance: none;
+  border-style: unset;
 }

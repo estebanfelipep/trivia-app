@@ -1,8 +1,10 @@
 @use '../abstracts';
+@use '../layout';
 
 .button {
-  @extend .py-2, .px-4, .d-bl;
+  @extend .py-2, .px-5, .d-bl, .transition, .ff-1, .clr-11;
   border-radius: 10em;
+  cursor: pointer;
   text-align: center;
   &--main {
     @extend .bgc-21, .clr-11;

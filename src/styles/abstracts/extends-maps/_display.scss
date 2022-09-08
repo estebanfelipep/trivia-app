@@ -2,6 +2,12 @@ $display: (
   'fl': 'flex',
   'bl': 'block',
   'no': 'none',
+  'gr': 'grid',
+);
+
+$position: (
+  'ab': 'absolute',
+  're': 'relative',
 );
 
 $flexDirection: (

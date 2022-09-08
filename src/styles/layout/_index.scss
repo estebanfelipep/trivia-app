@@ -8,3 +8,7 @@
 .desktop {
   @extend .d-no, .d-bl-d;
 }
+
+.transition {
+  transition: $transition;
+}

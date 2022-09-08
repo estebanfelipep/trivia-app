@@ -19,5 +19,8 @@
   &__logo {
     @extend .fw-700, .fsz-12, .clr-11;
     text-transform: uppercase;
+    &:hover {
+      @extend .clr-12;
+    }
   }
 }

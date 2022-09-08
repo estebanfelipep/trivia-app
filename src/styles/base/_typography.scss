@@ -1,9 +1,20 @@
-@use '../abstracts';
+@use '../abstracts' as *;
 
 html {
   @extend .ff-1;
 }
 
+h1,
+h2,
+h3 {
+  @extend .ff-1, .clr-11;
+}
+
 p {
-  @extend .ff-2;
+  @extend .ff-2, .clr-b2;
+  line-height: 1.5;
+}
+
+a {
+  transition: $transition;
 }
