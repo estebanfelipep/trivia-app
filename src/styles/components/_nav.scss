@@ -1,0 +1,17 @@
+@use '../abstracts';
+
+.nav {
+  &__list {
+    @extend .d-fl, .ai-c;
+    gap: 1em;
+  }
+  &__item {
+    a {
+      @extend .clr-11;
+      &:hover {
+        @extend .clr-12;
+        text-decoration: underline;
+      }
+    }
+  }
+}

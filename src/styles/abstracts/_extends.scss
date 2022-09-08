@@ -23,7 +23,7 @@
 @include m.setExtends(em.$fontSize, 'fsz', 'font-size');
 @include m.setExtends(em.$fontWeight, 'fw', 'font-weight');
 
-@media (min-width: 768px) {
+@include m.on-desktop {
   // Box model extends
   @include m.setBoxExtends(em.$boxMeasures, 'm', 'margin', '-d');
   @include m.setBoxExtends(em.$boxMeasures, 'p', 'padding', '-d');

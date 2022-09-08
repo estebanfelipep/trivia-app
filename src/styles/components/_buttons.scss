@@ -1,11 +1,13 @@
-@use '../abstracts' as a;
+@use '../abstracts';
 
 .button {
-  @extend .py-2, .px-4;
-  // padding: 0.5em 1.5em;
+  @extend .py-2, .px-4, .d-bl;
   border-radius: 10em;
   text-align: center;
   &--main {
-    background-color: a.$mainColor;
+    @extend .bgc-21, .clr-11;
+    &:hover {
+      @extend .bgc-31;
+    }
   }
 }

@@ -1,8 +1,21 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  transition: all ease 0.3s;
 }
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
 }
