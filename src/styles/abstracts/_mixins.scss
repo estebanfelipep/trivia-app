@@ -58,13 +58,13 @@ Sets extends classes for single properties based on the map passed or parameter
 
 /*Media query mixins*/
 @mixin on-mobile {
-  @media (max-width: 599px) {
+  @media (max-width: 767px) {
     @content;
   }
 }
 
 @mixin on-desktop {
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     @content;
   }
 }

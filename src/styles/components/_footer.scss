@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+@use '../layout';
+
+.footer {
+  @extend .bgc-32, .mt-5;
+  &__container {
+    @extend .container, .d-fl, .fd-c, .py-5, .jc-sb, .ai-c;
+    @extend .fd-r-d;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__left {
+    @extend .mb-5, .mb-0-d;
+    p {
+      @extend .ff-1;
+    }
+    p:nth-child(1) {
+      @extend .fw-700;
+    }
+    @include on-desktop {
+      text-align: left;
+    }
+  }
+  &__logo {
+    @extend .fsz-14, .fw-700, .clr-11;
+  }
+}

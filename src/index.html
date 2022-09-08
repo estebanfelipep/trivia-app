@@ -29,7 +29,7 @@
                 repo</a>
             </li>
             <li class="nav__item">
-              <a target="_blank" href="#footer">About us</a>
+              <a href="#footer">About us</a>
             </li>
           </ul>
         </nav>
@@ -38,14 +38,14 @@
 
     </div>
   </header>
-  <main class="content">
+  <main>
     <div class="container">
       <div id="home">
-        <div class="hero" style="display: flex; flex-direction: row; align-items: center">
+        <div class="hero">
           <div class="hero__content">
-            <h1>Test your knowledge!</h1>
-            <p>
-              Put your knowledge to test and find out how much you know your
+            <h1 class="hero__title">Test your knowledge!</h1>
+            <p class="hero__description">
+              Put your <b>knowledge to test</b> and find out how much you know your
               world
             </p>
           </div>
@@ -56,29 +56,74 @@
             </figcaption>
           </figure>
         </div>
-        <div class="intro" id="intro"></div>
-        <div class="choose-cat"></div>
+        <div class="home__intro" id="intro">
+          <p>Game explanation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae ultricies massa.
+            Duis in aliquet diam, a sagittis ipsum. Quisque et tellus ex. Mauris imperdiet est eu quam pharetra, non
+            facilisis dui feugiat. </p>
+        </div>
+        <div class="home__choose-cat">
+          <h2>Choose a category</h2>
+          <form class="form form--grid" id="chooseCat">
+            <div class="form__control radio">
+              <input class="radio__input" type="radio" name="radio" id="science" />
+              <div class="radio__card card ">
+                <label for="science" class="card__title">Computer Science</label>
+                <p class="card__subtitle">Top score: 30</p>
+              </div>
+            </div>
+            <div class="form__control radio">
+              <input class="radio__input" type="radio" name="radio" id="history" />
+              <div class="radio__card card ">
+                <label for="history" class="card__title">History</label>
+                <p class="card__subtitle">Top score: 10</p>
+              </div>
+            </div>
+            <div class="form__control radio">
+              <input class="radio__input" type="radio" name="radio" id="sports" />
+              <div class="radio__card card ">
+                <label for="sports" class="card__title">Sports</label>
+                <p class="card__subtitle">Top score: 0</p>
+              </div>
+            </div>
+            <div class="form__control radio">
+              <input class="radio__input" type="radio" name="radio" id="politics" />
+              <div class="radio__card card ">
+                <label for="politics" class="card__title">Politics</label>
+                <p class="card__subtitle">Top score: 0</p>
+              </div>
+            </div>
+            <div class="form__control radio">
+              <input class="radio__input" type="radio" name="radio" id="culture" />
+              <div class="radio__card card ">
+                <label for="culture" class="card__title">Culture</label>
+                <p class="card__subtitle">Top score: 20</p>
+              </div>
+            </div>
+            <div class="form__control radio">
+              <input class="radio__input" type="radio" name="radio" id="music" />
+              <div class="radio__card card ">
+                <label for="music" class="card__title">Music</label>
+                <p class="card__subtitle">Top score: 0</p>
+              </div>
+            </div>
+          </form>
+          <button class="button button--main" type="submit" form="chooseCat" value="Start game">Start game</button>
+        </div>
       </div>
-      <!-- <form action="/post/" style="margin: 0 auto; display: flex; flex-direction: column; width: 50%">
-        <input style="border: 1px solid lightgrey" type="checkbox" value="ComputerScience">Computer
-        Science</input>
-        <input type="checkbox" value="Music">Music</input>
-        <input type="checkbox" value="Art & culture">Art & culture</input>
-        <input type="checkbox" value="Sports">Sports</input>
-        <input type="checkbox" value="Computer Science">Computer Science</input>
-        <input type="checkbox" value="Books & History">Books & History</input>
-        <br />
-        <br />
-        <button type="submit">Start new game</button>
-        <br>
-        <br>
-      </form> -->
+
     </div>
     </div>
   </main>
-  <footer>
-    <div class="container">
-      <p>This is the footer</p>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__left">
+        <p>Top gun academy</p>
+        <p>2022</p>
+      </div>
+      <div class="footer__right">
+        <a class=" footer__logo" href="/">Trivia app</a>
+      </div>
     </div>
   </footer>
 </body>
