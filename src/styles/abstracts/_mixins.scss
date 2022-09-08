@@ -5,30 +5,30 @@ Sets extends classes for top, right, bottom, left, axes and all directions value
 @mixin setBoxExtends($measuresMap, $classBase, $propName, $classSuffix: '') {
   @each $measuresKey, $measuresValue in $measuresMap {
     .#{$classBase}t-#{$measuresKey}#{$classSuffix} {
-      #{$propName}-top: $measuresValue;
+      #{$propName}-top: #{$measuresValue};
     }
     .#{$classBase}r-#{$measuresKey}#{$classSuffix} {
-      #{$propName}-right: $measuresValue;
+      #{$propName}-right: #{$measuresValue};
     }
     .#{$classBase}b-#{$measuresKey}#{$classSuffix} {
-      #{$propName}-bottom: $measuresValue;
+      #{$propName}-bottom: #{$measuresValue};
     }
     .#{$classBase}l-#{$measuresKey}#{$classSuffix} {
-      #{$propName}-left: $measuresValue;
+      #{$propName}-left: #{$measuresValue};
     }
     .#{$classBase}x-#{$measuresKey}#{$classSuffix} {
-      #{$propName}-left: $measuresValue;
-      #{$propName}-right: $measuresValue;
+      #{$propName}-left: #{$measuresValue};
+      #{$propName}-right: #{$measuresValue};
     }
     .#{$classBase}y-#{$measuresKey}#{$classSuffix} {
-      #{$propName}-top: $measuresValue;
-      #{$propName}-bottom: $measuresValue;
+      #{$propName}-top: #{$measuresValue};
+      #{$propName}-bottom: #{$measuresValue};
     }
     .#{$classBase}xy-#{$measuresKey}#{$classSuffix} {
-      #{$propName}-top: $measuresValue;
-      #{$propName}-right: $measuresValue;
-      #{$propName}-bottom: $measuresValue;
-      #{$propName}-left: $measuresValue;
+      #{$propName}-top: #{$measuresValue};
+      #{$propName}-right: #{$measuresValue};
+      #{$propName}-bottom: #{$measuresValue};
+      #{$propName}-left: #{$measuresValue};
     }
   }
 }
@@ -53,5 +53,18 @@ Sets extends classes for single properties based on the map passed or parameter
         #{$propName}: $shadeValue;
       }
     }
+  }
+}
+
+/*Media query mixins*/
+@mixin on-mobile {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: 600px) {
+    @content;
   }
 }

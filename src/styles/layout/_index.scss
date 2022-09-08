@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.container {
+  @extend .my-0, .mx-a, .px-3;
+  max-width: 1060px;
+}
+
+.desktop {
+  @extend .d-no, .d-bl-d;
+}

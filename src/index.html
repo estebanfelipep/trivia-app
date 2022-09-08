@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -6,79 +7,80 @@
   <meta name="description" content="The best trivia app" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <title>Trivia App</title>
 </head>
+
 <body>
-<header>
-  <nav id="main-nav" class="container header">
-    <ul style="width: 100%; display: flex; flex-direction: row; justify-content: space-around ">
-      <li style="list-style: none">
-        <a
-          class="header__logo"
-          href="/"
-          aria-current="page"
-        >
-          Trivia app
-        </a>
-      </li>
-      <li style="list-style: none">
-        <a
-          class="header__button button button--main"
-          href="#intro"
-          aria-current="page"
-        >Play now
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
-<main class="content">
-  <div class="container">
-    <div id="home">
-      <div class="hero" style="display: flex; flex-direction: row; align-items: center">
-        <div class="hero__content">
-          <h1 tabindex="0">Test your knowledge!</h1>
-          <p tabindex="0">
-            Put your knowledge to test and find out how much you know your
-            world
-          </p>
-        </div>
-        <figure class="hero__image">
-          <img width="500"
-               src="./public/6987.jpg"
-               alt=""
-               aria-labelledby="caption"
-               tabindex="0"
-          >
-          <figcaption hidden>
-            Person with pencil filling out a form.
-          </figcaption>
-        </figure>
+  <header class="header">
+    <div class="header__container">
+
+      <div class="header__left">
+        <a class=" header__logo" href="/">Trivia app</a>
       </div>
-      <div class="intro" id="intro"></div>
-      <div class="choose-cat"></div>
+
+      <div class="header__right">
+        <nav class="nav header__nav desktop">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a target="_blank" href="https://gitlab.prodigious.com/Prodigious/top-gun-academy/trivia-app">Git
+                repo</a>
+            </li>
+            <li class="nav__item">
+              <a target="_blank" href="#footer">About us</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__button button button--main" href="#intro">Play now</a>
+      </div>
+
     </div>
-    <form action="/post/" style="margin: 0 auto; display: flex; flex-direction: column; width: 50%">
-      <input style="border: 1px solid lightgrey" type="checkbox" tabindex="1" value="ComputerScience">Computer Science</input>
-      <input type="checkbox" tabindex="2" value="Music">Music</input>
-      <input type="checkbox" tabindex="3" value="Art & culture">Art & culture</input>
-      <input type="checkbox" tabindex="4" value="Sports">Sports</input>
-      <input type="checkbox" tabindex="5" value="Computer Science">Computer Science</input>
-      <input type="checkbox" tabindex="6" value="Books & History">Books & History</input>
-      <br/>
-      <br/>
-      <button type="submit" tabindex="7">Start new game</button>
-      <br>
-      <br>
-    </form>
-  </div>
-  </div>
-</main>
-<footer>
-  <div class="container">
-    <p>This is the footer</p>
-  </div>
-</footer>
+  </header>
+  <main class="content">
+    <div class="container">
+      <div id="home">
+        <div class="hero" style="display: flex; flex-direction: row; align-items: center">
+          <div class="hero__content">
+            <h1>Test your knowledge!</h1>
+            <p>
+              Put your knowledge to test and find out how much you know your
+              world
+            </p>
+          </div>
+          <figure class="hero__image">
+            <img width="500" src="./public/6987.jpg" alt="" aria-labelledby="caption">
+            <figcaption hidden>
+              Person with pencil filling out a form.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="intro" id="intro"></div>
+        <div class="choose-cat"></div>
+      </div>
+      <!-- <form action="/post/" style="margin: 0 auto; display: flex; flex-direction: column; width: 50%">
+        <input style="border: 1px solid lightgrey" type="checkbox" value="ComputerScience">Computer
+        Science</input>
+        <input type="checkbox" value="Music">Music</input>
+        <input type="checkbox" value="Art & culture">Art & culture</input>
+        <input type="checkbox" value="Sports">Sports</input>
+        <input type="checkbox" value="Computer Science">Computer Science</input>
+        <input type="checkbox" value="Books & History">Books & History</input>
+        <br />
+        <br />
+        <button type="submit">Start new game</button>
+        <br>
+        <br>
+      </form> -->
+    </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>This is the footer</p>
+    </div>
+  </footer>
 </body>
+
 </html>
