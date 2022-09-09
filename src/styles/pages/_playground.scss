@@ -3,8 +3,11 @@
 .playground {
   &__container {
     @extend .bgc-32, .mx-a, .py-5, .px-5, .br-4;
-    width: 70%;
+    width: 100%;
     height: fit-content;
+    @media (min-width: 768px) {
+      width: 70%;
+    }
     //border-radius: 50px;
   }
   &__header {
@@ -23,7 +26,6 @@
   &__questionnaire {
     @extend .d-fl, .fd-c, .ai-c;
   }
-
   &__form {
     @extend .d-fl, .fd-c, .ai-c;
     legend {
