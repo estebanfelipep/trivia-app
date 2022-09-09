@@ -33,15 +33,14 @@
             </li>
           </ul>
         </nav>
-        <a class="header__button button button--main" href="#intro">Play now</a>
+        <a class="header__button button button--main" href="#playground">Play now</a>
       </div>
-
     </div>
   </header>
   <main>
     <div class="container">
       <div id="home">
-        <div class="hero">
+        <section class="hero">
           <div class="hero__content">
             <h1 class="hero__title">Test your knowledge!</h1>
             <p class="hero__description">
@@ -55,13 +54,13 @@
               Person with pencil filling out a form.
             </figcaption>
           </figure>
-        </div>
-        <div class="home__intro" id="intro">
+        </section>
+        <section class="home__intro" id="intro">
           <p>Game explanation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae ultricies massa.
             Duis in aliquet diam, a sagittis ipsum. Quisque et tellus ex. Mauris imperdiet est eu quam pharetra, non
             facilisis dui feugiat. </p>
-        </div>
-        <div class="home__choose-cat">
+        </section>
+        <section class="home__choose-cat">
           <h2>Choose a category</h2>
           <form class="form form--grid" id="chooseCat">
             <div class="form__control radio">
@@ -108,10 +107,58 @@
             </div>
           </form>
           <button class="button button--main" type="submit" form="chooseCat" value="Start game">Start game</button>
-        </div>
+        </section>
       </div>
 
-    </div>
+      <div id="playground" class="playground playground__container">
+        <div class="d-fl fd-r jc-sb">
+          <div class="d-fl fd-c">
+            <small>ATTEMPS</small>
+            <div class="d-fl fd-r mt-1">
+              <img width="27px" src="./assets/imgs/star.svg" alt="star attempts 1" class="attempts-star">
+              <img width="27px" src="./assets/imgs/starClear.svg" alt="star attempts 2" class="attempts-star">
+              <img width="27px" src="./assets/imgs/starClear.svg" alt="star attempts 3" class="attempts-star">
+            </div>
+          </div>
+          <div class="d-fl fd-c">
+            <p>Question 1 of 10</p>
+          </div>
+        </div>
+        <div class="d-fl fd-c ai-c ">
+          <h2>Question No. 1</h2>
+          <h3>Answer questions according to the category you chose.</h3>
+          <div class="line-separator"></div>
+
+          <form action="/" class="as-st wi-100">
+            <fieldset>
+              <legend class="mb-3">"The Hippogriff, not to be confused with the Griffon, is a magical creature
+                with the front half of an eagle, and the back half of what?",
+              </legend>
+              <div class="input__container">
+                <input type="radio" name="radio" id="opt-a" />
+                <label for="opt-a" class="">A horse</label>
+              </div>
+              <div class="input__container">
+                <input type="radio" name="radio" id="opt-b" />
+                <label for="opt-b" class="">A tiger</label>
+              </div>
+              <div class="input__container">
+                <input type="radio" name="radio" id="opt-c" />
+                <label for="opt-c" class="">A dragon</label>
+              </div>
+              <div class="input__container">
+                <input type="radio" name="radio" id="opt-d" />
+                <label for="opt-d" class="">A lion</label>
+              </div>
+              <div class="d-fl fd-r mt-4">
+                <button class="button--next as-c">Next question</button>
+              </div>
+            </fieldset>
+
+
+          </form>
+        </div>
+      </div>
     </div>
   </main>
 

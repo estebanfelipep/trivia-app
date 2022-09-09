@@ -10,6 +10,7 @@
 @include m.setBoxExtends(em.$boxMeasures, 'm', 'margin');
 @include m.setBoxExtends(em.$boxMeasures, 'p', 'padding');
 
+
 // Display extends
 @include m.setExtends(em.$display, 'd', 'display');
 @include m.setExtends(em.$position, 'pos', 'position');
@@ -18,11 +19,18 @@
 @include m.setExtends(em.$justifyContent, 'jc', 'justify-content');
 @include m.setExtends(em.$alingItems, 'ai', 'align-items');
 @include m.setExtends(em.$alignContent, 'ac', 'align-content');
+@include m.setExtends(em.$alignSelf, 'as', 'align-self');
 
 // Typography extends
 @include m.setExtends(em.$fontFamily, 'ff', 'font-family');
 @include m.setExtends(em.$fontSize, 'fsz', 'font-size');
 @include m.setExtends(em.$fontWeight, 'fw', 'font-weight');
+
+// Border Radius
+@include m.setExtends(em.$borderRadius, 'br', 'border-radius');
+
+// Width
+@include m.setExtends(em.$width, 'wi', 'width');
 
 @include m.on-desktop {
   // Box model extends

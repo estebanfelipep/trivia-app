@@ -1,0 +1,29 @@
+@use '../abstracts';
+
+.playground {
+  &__container {
+    @extend .bgc-32, .mx-a, .py-5, .px-5, .br-4;
+    width: 70%;
+    height: fit-content;
+    //border-radius: 50px;
+  }
+}
+
+.attempts-star {
+  width: 25px;
+}
+
+.line-separator {
+  @extend .mt-3, .mt-3-d, .mb-4, .mb-4;
+  height: 3px;
+  width: 55px;
+  background-color: #3A4A3DFF;
+}
+
+.input__container {
+  @extend .ml-3
+}
+
+.button--next {
+  @extend .my-3, .mx-a, .br-2, .bgc-42, .px-5, .py-3, .clr-w1;
+}
