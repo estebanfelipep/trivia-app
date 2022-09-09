@@ -51,6 +51,10 @@
 .button__container {
   @extend .d-fl, .fd-r, .mt-4;
   .button__next {
-    @extend .my-3, .mx-a, .br-2, .bgc-42, .px-5, .py-3, .clr-w1, .as-c;
+    @extend .my-3, .mx-a, .br-4, .bgc-42, .px-5, .py-3, .clr-w1, .as-c;
+    cursor: pointer;
+    &:hover {
+      @extend .bgc-41;
+    }
   }
 }
