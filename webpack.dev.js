@@ -43,6 +43,7 @@ module.exports = merge(common, {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  devtool: 'inline-source-map',
   devServer: {
     static: ['src/index.html'],
     hot: true,
