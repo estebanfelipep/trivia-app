@@ -24,7 +24,6 @@ class ChooseCategory {
 
   createForm() {
     this.form.innerHTML = this.formContent
-    // this.form.innerHTML = ''
   }
 
   setFormOptions(catsArray: CatData[]) {
@@ -72,6 +71,7 @@ class ChooseCategory {
 
   handleSubmit() {
     Modal.open()
+    // new Playground(endpoint)
     setTimeout(() => {
       this.playground.classList.add('active')
       Modal.setContent(this.playground)
@@ -79,5 +79,4 @@ class ChooseCategory {
   }
 }
 
-// const ChooseCategory = new ChooseCategoryClass()
 export default ChooseCategory
