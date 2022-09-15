@@ -28,9 +28,19 @@ class ChooseCategory {
   }
 
   setFormOptions(catsArray: CatData[]) {
+    this.formContent += `
+      <fieldset>
+        <legend class="form__field-title">Choose a category</legend>
+        <div class="form__options">
+    `
     catsArray.forEach((cat) => {
       this.setrCatFormOption(cat)
     })
+
+    this.formContent += `
+      </div>
+      </fieldset>
+    `
   }
 
   setrCatFormOption(catData: CatData) {

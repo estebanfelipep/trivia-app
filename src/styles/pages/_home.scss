@@ -26,6 +26,9 @@
     form {
       @extend .mb-5;
     }
+    .form__field-title {
+      @extend .d-no;
+    }
     button {
       @extend .mx-a, .mb-4, .fsz-12;
     }
