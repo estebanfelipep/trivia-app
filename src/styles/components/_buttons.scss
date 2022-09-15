@@ -6,10 +6,18 @@
   border-radius: 10em;
   cursor: pointer;
   text-align: center;
+  border-width: 2px;
+  border-style: solid;
   &--main {
-    @extend .bgc-21, .clr-11;
+    @extend .bgc-21, .bdc-21, .clr-11;
     &:hover {
       @extend .bgc-31;
+    }
+  }
+  &--secondary {
+    @extend .bgc-w1, .bdc-21, .clr-11;
+    &:hover {
+      @extend .bgc-32;
     }
   }
 }

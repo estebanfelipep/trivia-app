@@ -1,8 +1,10 @@
 @use '../abstracts';
 
 .playground {
+  @extend .d-no;
+
   &__container {
-    @extend .bgc-32, .mx-a, .py-5, .px-5, .br-4;
+    @extend .mx-a, .py-5, .px-5, .br-4;
     width: 100%;
     height: fit-content;
     @media (min-width: 768px) {
@@ -17,7 +19,6 @@
     @extend .d-fl, .fd-c;
     &.stars__container {
       @extend .d-fl, .fd-r, .mt-1;
-
     }
   }
   &__question-index {
@@ -32,8 +33,16 @@
       @extend .mb-3;
     }
     &.input__container {
-      @extend .ml-3
+      @extend .ml-3;
     }
+  }
+
+  & .button {
+    @extend .mx-a, .mt-4, .mb-3, .fsz-12;
+  }
+
+  &.active {
+    @extend .d-bl;
   }
 }
 
@@ -45,16 +54,5 @@
   @extend .mt-3, .mt-3-d, .mb-4, .mb-4;
   height: 3px;
   width: 55px;
-  background-color: #3A4A3DFF;
-}
-
-.button__container {
-  @extend .d-fl, .fd-r, .mt-4;
-  .button__next {
-    @extend .my-3, .mx-a, .br-4, .bgc-42, .px-5, .py-3, .clr-w1, .as-c;
-    cursor: pointer;
-    &:hover {
-      @extend .bgc-41;
-    }
-  }
+  background-color: #3a4a3dff;
 }

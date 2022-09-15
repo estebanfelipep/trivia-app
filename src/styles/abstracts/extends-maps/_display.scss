@@ -8,6 +8,7 @@ $display: (
 $position: (
   'ab': 'absolute',
   're': 'relative',
+  'fi': 'fixed',
 );
 
 $flexDirection: (
@@ -55,4 +56,4 @@ $alignSelf: (
   'fs': 'flex-start',
   'fe': 'flex-end',
   'c': 'center',
-)
+);

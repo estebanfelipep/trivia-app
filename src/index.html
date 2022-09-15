@@ -63,54 +63,13 @@
         <section class="home__choose-cat">
           <h2>Choose a category</h2>
           <form class="form form--grid" id="chooseCat">
-            <div class="form__control radio">
-              <input class="radio__input" type="radio" name="radio" id="science" />
-              <div class="radio__card card ">
-                <label for="science" class="card__title">Computer Science</label>
-                <p class="card__subtitle">Top score: 30</p>
-              </div>
-            </div>
-            <div class="form__control radio">
-              <input class="radio__input" type="radio" name="radio" id="history" />
-              <div class="radio__card card ">
-                <label for="history" class="card__title">History</label>
-                <p class="card__subtitle">Top score: 10</p>
-              </div>
-            </div>
-            <div class="form__control radio">
-              <input class="radio__input" type="radio" name="radio" id="sports" />
-              <div class="radio__card card ">
-                <label for="sports" class="card__title">Sports</label>
-                <p class="card__subtitle">Top score: 0</p>
-              </div>
-            </div>
-            <div class="form__control radio">
-              <input class="radio__input" type="radio" name="radio" id="politics" />
-              <div class="radio__card card ">
-                <label for="politics" class="card__title">Politics</label>
-                <p class="card__subtitle">Top score: 0</p>
-              </div>
-            </div>
-            <div class="form__control radio">
-              <input class="radio__input" type="radio" name="radio" id="culture" />
-              <div class="radio__card card ">
-                <label for="culture" class="card__title">Culture</label>
-                <p class="card__subtitle">Top score: 20</p>
-              </div>
-            </div>
-            <div class="form__control radio">
-              <input class="radio__input" type="radio" name="radio" id="music" />
-              <div class="radio__card card ">
-                <label for="music" class="card__title">Music</label>
-                <p class="card__subtitle">Top score: 0</p>
-              </div>
-            </div>
+
           </form>
           <button class="button button--main" type="submit" form="chooseCat" value="Start game">Start game</button>
         </section>
       </div>
 
-      <div id="playground" class="playground__container">
+      <div id="playground" class="playground playground__container">
         <div class="playground__header">
           <div class="playground__attempts">
             <small>ATTEMPS</small>
@@ -150,9 +109,7 @@
                 <input type="radio" name="radio" id="opt-d" />
                 <label for="opt-d" class="">A lion</label>
               </div>
-              <div class="button__container">
-                <button class="button__next ">Next question</button>
-              </div>
+              <button class="button button--main ">Next question</button>
             </fieldset>
           </form>
         </div>
@@ -171,6 +128,14 @@
       </div>
     </div>
   </footer>
+  <div class="modal">
+    <div class="modal__background">
+      <button class="modal__close button button--secondary">Close Trivia</button>
+      <div class="modal__container">
+        <p class="modal__loading">Loading...</p>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
