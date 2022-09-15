@@ -53,4 +53,4 @@ const triviaCats: CatData[] = [
   // }
 ]
 
-new TriviaApp(triviaCats)
+TriviaApp.start(triviaCats)
