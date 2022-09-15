@@ -28,8 +28,7 @@ class ModalClass {
 
   setEvents() {
     this.closeButton.addEventListener('click', () => {
-      alert('Are you sure? Progress in current round will be lost')
-      this.close()
+      this.close(true)
     })
   }
 
@@ -39,7 +38,13 @@ class ModalClass {
     this.startLoading()
   }
 
-  close() {
+  close(askConfirmation = false) {
+    if (askConfirmation) {
+      const confirmation = confirm(
+        'Are you sure? Progress in current round will be lost',
+      )
+      if (!confirmation) return
+    }
     this.domBody.classList.remove('noscroll')
     this.modal.classList.remove('active')
     this.clearContent()

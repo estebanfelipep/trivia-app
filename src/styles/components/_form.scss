@@ -1,13 +1,17 @@
 @use '../abstracts';
 
 .form {
-  @extend .d-gr;
-  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
-  gap: 1em;
+  &__field {
+    &-title {
+    }
+  }
+  &__options {
+    @extend .d-gr;
+    grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+    gap: 1em;
+  }
   &__control {
     position: relative;
-  }
-  input[type='radio'] {
   }
 }
 
@@ -36,8 +40,5 @@
     &:checked + .radio__card {
       @extend .bgc-32, .bdc-21;
     }
-    // &:focus + .radio__card {
-    //   @extend .bgc-32, .bdc-21;
-    // }
   }
 }

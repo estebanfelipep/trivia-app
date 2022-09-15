@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -13,21 +21,8 @@ li {
   list-style: none;
 }
 
-ul {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
-}
-img {
-  width: 100%;
-}
-
-button {
-  border-color: unset;
-  border-width: unset;
-  box-shadow: unset;
-  appearance: none;
-  border-style: unset;
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
 }

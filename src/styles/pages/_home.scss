@@ -10,6 +10,7 @@
     }
   }
   &__choose-cat {
+    @extend .pt-5;
     margin-top: 4em;
     margin-bottom: 7em;
     h2 {
@@ -24,6 +25,9 @@
     }
     form {
       @extend .mb-5;
+    }
+    .form__field-title {
+      @extend .d-no;
     }
     button {
       @extend .mx-a, .mb-4, .fsz-12;
