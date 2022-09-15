@@ -1,0 +1,36 @@
+@use '../abstracts';
+@use '../layout';
+
+.modal {
+  &__background {
+    @extend .bgc-w1, .wi-100, .pos-fi, .d-no;
+    // transition: all ease 3s;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .active > & {
+      @extend .d-fl, .fd-c;
+      opacity: 1;
+    }
+  }
+  &__container {
+    @extend .mxy-a;
+  }
+  &__loading {
+    @extend .fsz-14;
+    &.inactive {
+      @extend .d-no;
+    }
+  }
+  &__close {
+    @extend .fsz-12, .mx-a, .my-2;
+  }
+}
+
+body {
+  &.noscroll {
+    overflow: hidden;
+  }
+}
