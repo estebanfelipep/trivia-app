@@ -11,10 +11,12 @@ class ChooseCategory {
   playground: HTMLElement
 
   formContent: string
+  triviaInitialDifficulty: string
 
   // constructor(catsArray) {
   constructor(catsArray) {
     this.formContent = ''
+    this.triviaInitialDifficulty = 'easy'
 
     this.setFormOptions(catsArray)
     this.setDomElementsVars()
@@ -71,7 +73,7 @@ class ChooseCategory {
 
   handleSubmit() {
     Modal.open()
-    // new Playground(endpoint)
+    // new Playground(playgroundData)
     setTimeout(() => {
       this.playground.classList.add('active')
       Modal.setContent(this.playground)
