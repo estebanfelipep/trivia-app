@@ -1,27 +1,24 @@
 import Modal from './Modal'
 import CatData from '../models/catData'
+import Playground from './Playground'
+import TriviaApp from './TriviaApp'
 
 class ChooseCategory {
   selectors = {
     form: '#chooseCat',
-    playground: '#playground',
+    playgroundContainer: '#playground',
   }
 
   form: HTMLElement
-  playground: HTMLElement
+  playgroundContainer: HTMLElement
 
   formContent = ''
-  triviaInitialDifficulty = 'easy'
 
   constructor(catsArray: CatData[]) {
     this.setFormOptions(catsArray)
     this.setDomElementsVars()
     this.createForm()
     this.setEvents()
-  }
-
-  createForm() {
-    this.form.innerHTML = this.formContent
   }
 
   setFormOptions(catsArray: CatData[]) {
@@ -43,7 +40,7 @@ class ChooseCategory {
   setrCatFormOption(catData: CatData) {
     const optionField = `
       <div class="form__control radio"> 
-        <input class="radio__input" type="radio" name="radio" id="${catData.slug}">
+        <input class="radio__input" type="radio" name="${TriviaApp.catsFormOptionName}" id="${catData.id}" data-title="${catData.title}" >
         <div class="radio__card card ">
           <label for="${catData.slug}" class="card__title">${catData.title}</label>
           <p class="card__subtitle">Top score: ${catData.topScore}</p>
@@ -60,6 +57,10 @@ class ChooseCategory {
     }
   }
 
+  createForm() {
+    this.form.innerHTML = this.formContent
+  }
+
   setEvents() {
     this.form.addEventListener('submit', (e) => {
       e.preventDefault()
@@ -68,13 +69,40 @@ class ChooseCategory {
   }
 
   handleSubmit() {
+    const chosenCat = this.getChosenCat()
+    if (!chosenCat) return
+
+    const playgroundStartData = {
+      catId: chosenCat.id,
+      catTitle: chosenCat.title,
+    }
+
+    new Playground(playgroundStartData)
+
     Modal.open()
-    // objeto con prop de playground
-    // new Playground(playgroundData)
     setTimeout(() => {
-      this.playground.classList.add('active')
-      Modal.setContent(this.playground)
+      this.playgroundContainer.classList.add('active')
+      Modal.setContent(this.playgroundContainer)
     }, 2000)
+  }
+
+  getChosenCat() {
+    const chooseCatOptions = document.getElementsByName(
+      TriviaApp.catsFormOptionName,
+    )
+    const chosenCatData: Partial<{
+      id: number
+      title: string
+    }> = {}
+
+    for (let i = 0; i < chooseCatOptions.length; i++) {
+      if ((chooseCatOptions[i] as HTMLInputElement).checked) {
+        chosenCatData.id = +chooseCatOptions[i].id
+        chosenCatData.title = chooseCatOptions[i].dataset.title
+      }
+    }
+    if (!chosenCatData.id || !chosenCatData.title) return false
+    return chosenCatData
   }
 }
 

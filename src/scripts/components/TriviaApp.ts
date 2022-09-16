@@ -5,13 +5,10 @@ import ApiQueryParams from '../models/apiQueryParams'
 class TriviaAppClass {
   catsData: CatData[]
   apiEndPointBase = 'https://opentdb.com/api.php'
-  apiEndPointQueryParams: Partial<ApiQueryParams> = {
-    amount: 10,
-    type: 'multiple',
-  }
+  catsFormOptionName = 'chooseCat'
 
   constructor() {
-    console.log(this.apiEndPointQueryParams, this.apiEndPointBase)
+    //
   }
 
   start(catsData) {
